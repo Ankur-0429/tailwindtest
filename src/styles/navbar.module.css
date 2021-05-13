@@ -1,0 +1,126 @@
+.container_fluid{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
+.navbar {
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    /* transition-delay: 300ms; */
+    margin-bottom: 0px !important;
+    top: 0px;
+    right: 0px;
+}
+
+.navbar_fixed_top {
+    border-width: 0 !important;
+}
+
+.scrolled {
+    background-color: rgba(70,75,79,1);
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.navbar_nav {
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.navbar_nav:hover{
+    text-decoration: overline;
+    text-decoration-color: #8842d5;
+    text-underline-position: over;
+    transition-property: width;
+}
+
+@media(min-width: 768px) {
+    .navbar_nav {
+        margin: 7.5px 15px;
+    }
+
+    .navbar_right {
+        margin-right: -15px;
+    }
+
+    .navbar-nav {
+        padding: 16px;
+    }
+
+}
+
+
+
+/*Ankur: adding custom animations for icon bar mobile*/
+.navbar_toggle > span:first-child{
+    transform: rotate(45deg);
+}
+.navbar_toggle > span:nth-child(2){
+    opacity: 0;
+}
+.navbar_toggle > span:last-child{
+    transform: rotate(-45deg);
+    margin-bottom: 5px;
+}
+
+.navbar_toggle_collapsed > span:first-child{
+    transform: rotate(0deg);
+}
+.navbar_toggle_collapsed > span:nth-child(2){
+    opacity: 1;
+}
+.navbar_toggle_collapsed > span:last-child{
+    transform: rotate(0deg);
+    margin-bottom: 5px;
+}
+
+.navbar_toggle {
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
+}
+
+.nav_toggled {
+    background-color: rgba(70,75,79,1);
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+@media(max-width: 767px) {
+    .navbar_toogle_collapse {
+        border-top: 0 !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .ul_navbar_nav {
+        padding-left: 0;
+        margin: 0;
+        align-items: center;
+    }
+    .ul_navbar_nav {
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .nav_item {
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    .nav_item:last-child {
+        border-bottom: none;
+    }
+}

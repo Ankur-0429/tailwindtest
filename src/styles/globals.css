@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
