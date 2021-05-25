@@ -1,11 +1,36 @@
 import React from 'react';
 import styles from '../styles/register.module.css';
 import Tilt from 'react-tilt';
+import { useState,useEffect } from "react";
 
 const Tutor = ({id, name, pic,bio}) =>{
     const [readMore, setReadMore] = React.useState(false)
+
+    const [size, setSize] = useState(1)
+  
+    useEffect(()=>{
+      window.addEventListener('resize', checkSize)
+      return ()=>{
+        window.removeEventListener('resize', checkSize)
+      }
+    })
+    useEffect(()=>{
+      setSize(window.innerWidth-50)
+    },[])
+
+    const checkSize = () =>{
+        if (size < 620){
+            setSize(window.innerWidth-50)
+        }
+
+        else {
+            setSize(620)
+        }
+        
+      }
+
         return <>
-        <Tilt options={{ max : 25 }} style={{ height: 250, width: 620 }}>
+        <Tilt options={{ max : 25 }}>
             <figure className="transform hover:shadow-2xl shadow-md md:flex bg-gray-50 rounded-lg p-0 md:p-0 transition">
                 <img className="w-32 h-32 md:w-48 md:h-auto md:rounded-r-none md:mx-0 rounded-lg mx-auto" src={pic} alt={name} width="384" height="512" />
                 <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
