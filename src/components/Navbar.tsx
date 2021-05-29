@@ -11,14 +11,14 @@ export default function Navbar() {
                 <Link href="/"><img src='/Images/logoSmall.jpg' /></Link>
             </div>
             {ifMenu ? 
-                <ul className="block font-bold md:grid grid-flow-col grid-cols-auto">
+                <ul className="block font-bold md:grid grid-flow-col grid-cols-auto mr-40 text-center">
                     <Link href="/">
                         <p className="cursor-pointer hover:underline pt-5">Login</p>
                     </Link>
                     <Link href="/RegisterPage">
                     <p className="cursor-pointer hover:underline pt-5">Register</p>
                     </Link>
-                    <Link href="/">
+                    <Link href="/Tutors">
                     <p className="cursor-pointer hover:underline pt-5">Tutors</p>
                     </Link>
                     <Link href="/">
@@ -32,7 +32,7 @@ export default function Navbar() {
                     <Link href="/RegisterPage">
                     <p className="cursor-pointer hover:underline pt-5">Register</p>
                     </Link>
-                    <Link href="/">
+                    <Link href="/Tutors">
                     <p className="cursor-pointer hover:underline pt-5">Tutors</p>
                     </Link>
                     <Link href="/">

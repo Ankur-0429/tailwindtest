@@ -29,10 +29,10 @@ const Tutor = ({id, name, pic,bio}) =>{
         
       }
 
-        return <>
-        <Tilt options={{ max : 25 }}>
+        return <div className='max-w-2xl py-10'>
+        <Tilt options={{ max : 25, easing: "cubic-bezier(.03,.98,.52,.99)"}}>
             <figure className="transform hover:shadow-2xl shadow-md md:flex bg-gray-50 rounded-lg p-0 md:p-0 transition">
-                <img className="w-32 h-32 md:w-48 md:h-auto md:rounded-r-none md:mx-0 rounded-lg mx-auto" src={pic} alt={name} width="384" height="512" />
+                <img className="w-32 h-32 md:w-48 md:h-auto md:rounded-r-none md:rounded-l-lg md:mx-0 rounded-full mx-auto" src={pic} alt={name} width="384" height="512" />
                 <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
                     <blockquote>
                             <h4 className="text-2xl font-semibold">Hi I'm {name}</h4>
@@ -50,7 +50,7 @@ const Tutor = ({id, name, pic,bio}) =>{
                 </div>
             </figure>
         </Tilt>
-    </>
+    </div>
 }
 
 export default Tutor

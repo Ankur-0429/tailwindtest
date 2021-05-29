@@ -30,7 +30,11 @@ const Home = () => {
       <TabTitle title ='Franklin Study Group'/>
       <Navbar />
       <FlexColumns columns={['home', 'subjects', 'members']} start={60} />
-      <img id="home" src="/Images/study.jpeg" className="w-full"/>
+      <div className="relative">
+        <img id="home" src="/Images/study.jpeg" className="w-full"/>
+        <p className="absolute top-1/4 mx-auto left-0 right-0 text-center font-bold text-xl text-purple-300 md:top-60 md:text-4xl">Study Buddies</p>
+      </div>
+      {/*<p className="absolute top-40 bottom-0 left-0 right-0 m-auto text-center font-bold text-xl text-purple-300 md:top-60 md:text-4xl">Study</p>*/}
       <div style={{borderLeft: `${size}px solid transparent`, borderRight: '0px solid transparent', borderBottom: `50px solid ${subjectBackground}`, position: 'relative', bottom:'50px', transform: 'scaleX(-1)'}} />
       
       <div className="px-4 pb-4 py-2 relative" style={{bottom: '3.1rem', backgroundColor: `${subjectBackground}`}}>

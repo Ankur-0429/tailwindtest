@@ -115,7 +115,7 @@ const InputForm = () => {
         </article>
       </div>
 
-      <Tutor key={person.id} {...person}/>
+      <Tutor key={person.id} {...person} />
   </>
 };
 
