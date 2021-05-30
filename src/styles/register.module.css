@@ -237,8 +237,8 @@ overflow: hidden;
   }
   .form_control {
     display: grid;
-    margin: 0.5rem 0;
-    grid-template-columns: 100px 1fr;
+    margin: 0.5rem;
+    grid-template-columns: 50px 1fr;
     align-items: center;
   }
   .form button {

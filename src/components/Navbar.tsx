@@ -5,13 +5,13 @@ export default function Navbar() {
   const [ifMenu, setIfMenu] = useState(false)
 
   return (
-    <div className="mx-auto bg-gradient-to-r from-indigo-400 to-violet-300 p-5 sticky top-0">
-        <nav className="grid grid-flow-col grid-cols-auto">
+    <div className="mx-auto bg-gradient-to-r from-indigo-400 to-violet-300 p-5 sticky top-0 min-w-full">
+        <nav className="grid grid-flow-col grid-cols-auto relative">
             <div className="cursor-pointer">
                 <Link href="/"><img src='/Images/logoSmall.jpg' /></Link>
             </div>
             {ifMenu ? 
-                <ul className="block font-bold md:grid grid-flow-col grid-cols-auto mr-40 text-center">
+                <ul className="font-bold md:grid grid-flow-col grid-cols-auto block">
                     <Link href="/">
                         <p className="cursor-pointer hover:underline pt-5">Login</p>
                     </Link>

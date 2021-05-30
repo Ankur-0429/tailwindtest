@@ -64,6 +64,7 @@ const InputForm = () => {
                 name="name" 
                 value={person.name}
                 onChange={handleChange}
+                size={1}
               />
             </div>
 
@@ -74,7 +75,8 @@ const InputForm = () => {
                 id="email" 
                 name="email" 
                 value={person.email}
-                onChange={handleChange} 
+                onChange={handleChange}
+                size={1} 
               />
             </div>
 
@@ -86,6 +88,7 @@ const InputForm = () => {
                 name="bio" 
                 value={person.bio}
                 onChange={handleChange}
+                size={1}
               />
             </div>
 
