@@ -96,7 +96,8 @@ const InputForm = () => {
               <label htmlFor="image_uploads">Image: </label>
               <input 
                 type="file"
-                accept="image/*" 
+                accept="image/*"
+                size={1} 
                 onChange={(event)=>{
                   var file = event.target.files[0]
                   if (file && file.type.substring(0,5) === 'image'){
