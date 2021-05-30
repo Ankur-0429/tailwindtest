@@ -97,7 +97,6 @@ const InputForm = () => {
               <input 
                 type="file"
                 accept="image/*"
-                size={1} 
                 onChange={(event)=>{
                   var file = event.target.files[0]
                   if (file && file.type.substring(0,5) === 'image'){
@@ -107,6 +106,7 @@ const InputForm = () => {
                     setSelectedFile(null)
                   }
                 }}
+                size={1} 
               />
             </div>
 
