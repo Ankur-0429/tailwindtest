@@ -8,6 +8,26 @@ const InputForm = () => {
   const [ifError, setIfError] = useState(false)
   const [person, setPerson] = useState({id:1, name: '', bio: '', pic: '', email: ''})
   const [selectedFile, setSelectedFile] = useState<File>()
+
+  const [size, setSize] = useState(1)
+    const [ifMobile, setIfMobile] = useState(false)
+
+    useEffect(()=>{
+        window.addEventListener('resize', checkSize)
+        return ()=>{
+        window.removeEventListener('resize', checkSize)
+        }
+    })
+    useEffect(()=>{
+        setSize(window.innerWidth)
+        if (size <= 768){setIfMobile(true)}
+    },[])
+
+    const checkSize = () =>{
+        setSize(window.innerWidth)
+        if (size <= 768){setIfMobile(true)}
+        else {setIfMobile(false)}
+    }
   
   useEffect(()=>{
     if (selectedFile){
@@ -119,7 +139,9 @@ const InputForm = () => {
         </article>
       </div>
 
-      <Tutor key={person.id} {...person} />
+      {ifMobile ? <Tutor key={person.id} {...person} ifTilt={false} />:
+        <Tutor key={person.id} {...person} ifTilt={true} />
+      }
   </>
 };
 
