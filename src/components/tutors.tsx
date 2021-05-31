@@ -1,18 +1,48 @@
 import React from 'react';
 import Tutor from './tutor';
+import {useState, useEffect} from 'react';
 
 const Tutors = ({tutors})=>{
-    const [ifOdd, setIfOdd] = React.useState(true)
+    const [size, setSize] = useState(1)
+    const [ifMobile, setIfMobile] = useState(false)
+
+    useEffect(()=>{
+        window.addEventListener('resize', checkSize)
+        return ()=>{
+        window.removeEventListener('resize', checkSize)
+        }
+    })
+    useEffect(()=>{
+        setSize(window.innerWidth)
+        if (size <= 768){setIfMobile(true)}
+    },[])
+
+    const checkSize = () =>{
+        setSize(window.innerWidth)
+        if (size <= 768){setIfMobile(true)}
+        else {setIfMobile(false)}
+    }
+
     return <section>
         {tutors.map((tutor, index)=>{
-            if(index % 2 == 0){
+            if(index % 2 == 0 && !ifMobile){
                 return (
-                    <Tutor key={tutor.id} {...tutor}/>
+                    <div className="relative left-32 lg:left-64">
+                        <Tutor key={tutor.id} {...tutor}/>
+                    </div>
                 )
             }
+            else if (index % 2 != 0 && !ifMobile){
+                return (
+                    <div className="relative left-8">
+                        <Tutor key={tutor.id} {...tutor}/>
+                    </div>
+                )
+            }
+
             else{
                 return (
-                    <div className="absolute right-32">
+                    <div>
                         <Tutor key={tutor.id} {...tutor}/>
                     </div>
                 )

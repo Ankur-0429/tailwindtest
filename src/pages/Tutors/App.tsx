@@ -14,10 +14,10 @@ function App(props) {
   },[])
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <TabTitle title='Tutors'/>
       <NavBar />
-      <div className="absolute p-5 mb-40 w-full md:left-0 -translate-x-2/4 -translate-y-2/4">
+      <div className="absolute pl-5 md:overflow-x-hidden w-screen md:left-8 lg:left-44">
         <Tutors tutors = {tutors} />
       </div>
     </main>

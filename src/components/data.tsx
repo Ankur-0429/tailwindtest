@@ -8,7 +8,7 @@ export const data = [
     {
       id: 1,
       name: 'MJ',
-      bio: 'simple coder but worse than Ankur',
+      bio: 'simple coder but worse than Ankur sklasjdflakvjsdlkd vslkd sjd ls djskl asjdflask jlskdf  jlkasjf klwsf asjf klasdjfsalkf sajf salkf sklf wsflkj awflw jflkw jfowiejf woiiijf woif wioefj wpfijwoif lk wjfoiwjf wiofj woiifh wlfj wlfj woif jwfoi wfoiwf wejklf wfklwj foiew fwoi fejwpe fwiofjw;iof jwifjwlkfhwofj qf ',
       pic: 'https://api.time.com/wp-content/uploads/2017/12/terry-crews-person-of-year-2017-time-magazine-facebook-1.jpg?quality=85'
     },
     {
