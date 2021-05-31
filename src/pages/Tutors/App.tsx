@@ -17,7 +17,7 @@ function App(props) {
     <main className="overflow-x-hidden">
       <TabTitle title='Tutors'/>
       <NavBar />
-      <div className="absolute pl-5 md:overflow-x-hidden w-screen md:left-8 lg:left-44">
+      <div className="absolute px-5 md:overflow-x-hidden w-screen md:left-8 lg:left-44">
         <Tutors tutors = {tutors} />
       </div>
     </main>

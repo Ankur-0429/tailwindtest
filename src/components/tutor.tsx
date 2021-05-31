@@ -4,15 +4,20 @@ import Tilt from 'react-tilt';
 import { useState,useEffect } from "react";
 import { Transform } from 'node:stream';
 
-const Tutor = ({id, name, pic,bio}) =>{
+const Tutor = ({id, name, pic,bio, ifTilt}) =>{
 
      
     return( 
         <div className='max-w-xl py-10'> 
-            <Tilt options={{ max : 25, easing: "cubic-bezier(.03,.98,.52,.99)"}}>
-                <Part name={name} pic={pic} bio={bio}/>
-            </Tilt>
-        </div>)
+            {ifTilt ? <div>
+                <Tilt options={{ max : 25, easing: "cubic-bezier(.03,.98,.52,.99)"}}>
+                        <Part name={name} pic={pic} bio={bio}/>
+                </Tilt> 
+            </div>:
+            <Part name={name} pic={pic} bio={bio}/>}   
+        </div>
+    )
+        
 }
 
 export default Tutor

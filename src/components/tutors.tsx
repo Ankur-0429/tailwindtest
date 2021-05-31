@@ -28,14 +28,14 @@ const Tutors = ({tutors})=>{
             if(index % 2 == 0 && !ifMobile){
                 return (
                     <div className="relative left-32 lg:left-64">
-                        <Tutor key={tutor.id} {...tutor}/>
+                        <Tutor key={tutor.id} {...tutor} ifTilt={true}/>
                     </div>
                 )
             }
             else if (index % 2 != 0 && !ifMobile){
                 return (
                     <div className="relative left-8">
-                        <Tutor key={tutor.id} {...tutor}/>
+                        <Tutor key={tutor.id} {...tutor} ifTilt={true}/>
                     </div>
                 )
             }
@@ -43,7 +43,7 @@ const Tutors = ({tutors})=>{
             else{
                 return (
                     <div>
-                        <Tutor key={tutor.id} {...tutor}/>
+                        <Tutor key={tutor.id} {...tutor} ifTilt={false}/>
                     </div>
                 )
             }
